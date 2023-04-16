@@ -1,16 +1,21 @@
-import openai
-from .config import OPENAI_API_KEY
+from gpt4_command_executor import config, executor
 
-openai.api_key = OPENAI_API_KEY
 
-def get_terminal_command(prompt):
-    response = openai.Completion.create(
-        engine="text-davinci-002",
-        prompt=prompt,
-        max_tokens=100,
-        n=1,
-        stop=None,
-        temperature=0.5,
-    )
-    command = response.choices[0].text.strip()
-    return command
+def main():
+    print("Welcome to GPT-4 Command Executor!")
+
+    while True:
+        prompt = input("Enter your command request (or type 'exit' to quit): ")
+
+        if prompt.lower() == "exit":
+            break
+
+        command = config.get_terminal_command(prompt)
+
+        result = executor.execute_command(command)
+        if result:
+            print(f"Command output:\n{result}")
+
+
+if __name__ == "__main__":
+    main()

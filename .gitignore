@@ -2,3 +2,4 @@ gpt4_command_executor.egg-info
 .idea
 .env
 gpt4_command_executor/__pycache__
+command_executor.log
