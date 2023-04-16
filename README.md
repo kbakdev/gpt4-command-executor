@@ -31,6 +31,67 @@ To use the GPT-4 Command Executor in your Python code, simply import the get_ter
 from gpt4_command_executor import get_terminal_command, execute_command
 ```
 
+## Example
+
+Here's a simple script that uses the GPT-4 Command Executor to request a terminal command based on user input and execute it on the local computer. The script prompts the user for input and generates a potential terminal command based on that input.
+
+Assuming you have installed the project as a Python package (as described in the Installation section), you can create a script like this:
+
+```python
+from gpt4_command_executor import get_terminal_command, execute_command
+
+def main():
+    print("Welcome to GPT-4 Command Executor!")
+    
+    while True:
+        prompt = input("Enter your command request (or type 'exit' to quit): ")
+        
+        if prompt.lower() == "exit":
+            break
+
+        # Get a command suggestion from GPT-4
+        command = get_terminal_command(prompt)
+        
+        print(f"Generated command: {command}")
+
+        # Execute the command (optionally: add a confirmation before execution)
+        result = execute_command(command)
+        
+        print(f"Command output:\n{result}")
+
+if __name__ == "__main__":
+    main()
+```
+
+It's saved locally as as gpt4_command_executor_demo.py in the main project directory or any other location.
+
+Run the script in the terminal using the command:
+
+```python gpt4_command_executor_demo.py```
+
+The script will prompt you for a command request, and then use GPT-4 to generate and execute a potential terminal command based on your input.
+
+Please ensure you understand and accept all potential risks associated with executing AI-generated commands. Always review and approve the commands before executing them to avoid unintended results or security-related issues.
+
+Here's an example of the script in action:
+
+```
+    ~/gpt4-command-executor    main +1 !3 ?1    python3 gpt4_command_executor_demo.py                                                               INT ✘  5m 8s   system  
+Welcome to GPT-4 Command Executor!
+Enter your command request (or type 'exit' to quit): List all files in the current directory
+Generated command: ls
+Command output:
+gpt4_command_executor
+gpt4_command_executor_demo.py
+gpt4_command_executor.egg-info
+Makefile
+README.md
+requirements.txt
+setup.py
+venv
+
+```
+
 ## Contributing
 Contributions are welcome! Please feel free to submit a Pull Request or create an Issue if you encounter any problems or have suggestions for improvements.
 
