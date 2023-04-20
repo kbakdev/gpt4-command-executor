@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="gpt4_command_executor",
+    name="gpt4-command-executor",
     version="0.1",
     packages=find_packages(),
     install_requires=[
