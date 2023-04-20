@@ -104,6 +104,18 @@ Generated command 'sudo nmap -sn 192.168.0.0/24' is not safe. Skipping execution
 Sorry, I couldn't generate a command for that request.
 ```
 
+```
+    ~  q '?? list js files'                                  ✔  system  
+Generated command: ls *.js
+Do you want to execute this command? (y/n): y
+```
+
+```
+    ~  q '?? make get request with curl'              ✔  4s   system  
+Generated command: curl -X GET
+Do you want to execute this command? (y/n): y
+```
+
 ## Contributing
 Contributions are welcome! Please feel free to submit a Pull Request or create an Issue if you encounter any problems or have suggestions for improvements.
 
