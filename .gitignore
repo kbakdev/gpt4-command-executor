@@ -3,3 +3,6 @@ gpt4_command_executor.egg-info
 .env
 gpt4_command_executor/__pycache__
 command_executor.log
+build
+copilot_cli.egg-info
+dist
