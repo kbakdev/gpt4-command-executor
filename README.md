@@ -63,6 +63,18 @@ Generated command: tar -czvf compressed.tar.gz *
 Do you want to execute this command? (y/n): 
 ```
 
+```
+    ~  q '?? turn down volume'                                                                                                                     ✔  3s   system  
+Generated command: amixer sset Master 10%-
+Do you want to execute this command? (y/n): y
+Simple mixer control 'Master',0
+  Capabilities: pvolume pswitch pswitch-joined
+  Playback channels: Front Left - Front Right
+  Limits: Playback 0 - 65536
+  Mono:
+  Front Left: Playback 26141 [40%] [on]
+  Front Right: Playback 26141 [40%] [on]
+```
 
 ## Contributing
 Contributions are welcome! Please feel free to submit a Pull Request or create an Issue if you encounter any problems or have suggestions for improvements.
