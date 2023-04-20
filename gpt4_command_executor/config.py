@@ -1,31 +1,26 @@
-import openai
-from dotenv import load_dotenv
-import os
-
-load_dotenv()
-
-OPENAI_API_KEY = os.environ["OPENAI_API_KEY"]
+from gpt4_command_executor import gpt3
 
 
-# get_terminal_command(prompt) -> command
-# Description: Generate command to execute
-# based on prompt
+def get_general_command(prompt):
+    return gpt3.generate_terminal_command(prompt)
+
+
+def get_git_command(prompt):
+    git_prompt = f"git {prompt}"
+    return gpt3.generate_terminal_command(git_prompt)
+
+
+def get_gh_command(prompt):
+    gh_prompt = f"github {prompt}"
+    return gpt3.generate_terminal_command(gh_prompt)
+
+
 def get_terminal_command(prompt):
-    response = openai.Completion.create(
-        engine="text-davinci-002",
-        prompt=profile_prompt(prompt),
-        max_tokens=100,
-        n=1,
-        stop=None,
-        temperature=0.5,
-    )
-    command = response.choices[0].text.strip()
-    return command
-
-# make prompt a little better, so it prints only the command, not the whole prompt
-def profile_prompt(prompt):
-#     return string where you ask to print one line command without anymore information, and then you return the command, you can also ask based on your os
-    return "print one line command for terminal without anymore information:\n" + prompt + "\ncommand:"
-
-def authorize_api_key():
-    openai.api_key = OPENAI_API_KEY
+    if prompt.startswith("??"):
+        return get_general_command(prompt[2:].strip())
+    elif prompt.startswith("git?"):
+        return get_git_command(prompt[4:].strip())
+    elif prompt.startswith("gh?"):
+        return get_gh_command(prompt[3:].strip())
+    else:
+        return gpt3.generate_terminal_command(prompt)
