@@ -76,6 +76,34 @@ Simple mixer control 'Master',0
   Front Right: Playback 26141 [40%] [on]
 ```
 
+```
+    ~  q '?? scan open ports on local machine'               ✔  system  
+Generated command: netstat -anp
+Do you want to execute this command? (y/n): y
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name    
+...
+```
+
+```
+    ~  q '?? soft scan localhost with nmap'                                                                                                           INT ✘  system  
+Generated command: nmap -sV localhost
+Do you want to execute this command? (y/n): y
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-04-20 23:36 CEST
+Nmap scan report for localhost (127.0.0.1)
+Host is up (0.000066s latency).
+Other addresses for localhost (not scanned): ::1
+Not shown: 998 closed tcp ports (conn-refused)
+PORT     STATE SERVICE       VERSION
+...
+```
+
+```
+    ~  q '?? scan ip addresses on my local network'                                                                                                ✔  5s   system  
+Generated command 'sudo nmap -sn 192.168.0.0/24' is not safe. Skipping execution.
+Sorry, I couldn't generate a command for that request.
+```
+
 ## Contributing
 Contributions are welcome! Please feel free to submit a Pull Request or create an Issue if you encounter any problems or have suggestions for improvements.
 
