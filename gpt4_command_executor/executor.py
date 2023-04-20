@@ -10,7 +10,7 @@ def log_command(command):
 
 
 def is_command_safe(command):
-    allowed_commands = ["ls", "cd", "mkdir", "touch", "cat", "echo", "mv", "cp", "grep"]
+    allowed_commands = ["ls", "cd", "mkdir", "touch", "cat", "echo", "mv", "cp", "grep", "pwd"]
     forbidden_commands = ["rm", "sudo", "chmod"]
 
     for forbidden in forbidden_commands:
