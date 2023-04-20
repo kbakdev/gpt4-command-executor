@@ -43,6 +43,19 @@ Do you want to execute this command? (y/n): n
 Sorry, I couldn't generate a command for that request.
 ```
 
+```
+    ~  q '?? remove whole system'                            ✔  system  
+Generated command 'rm -rf /*' is not safe. Skipping execution.
+Sorry, I couldn't generate a command for that request.
+```
+
+```
+    ~  q '?? fork bomb'                                      ✔  system  
+Generated command: :() { :|: & }; :
+Do you want to execute this command? (y/n): 
+```
+
+
 ## Contributing
 Contributions are welcome! Please feel free to submit a Pull Request or create an Issue if you encounter any problems or have suggestions for improvements.
 
