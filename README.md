@@ -37,23 +37,10 @@ Please ensure you understand and accept all potential risks associated with exec
 Here's an example of the script in action:
 
 ```
-    ~/gpt4-command-executor    main *2 +5 !4    ./copilot_cli '?? print working directory'                                              ✔  gpt4-command-executor   system  
-Generated command: pwd
-Do you want to execute this command? (y/n): y
-/home/kacper/gpt4-command-executor
-```
-
-```
-    ~/gpt4-command-executor    main *2 +5 !4    ./copilot_cli '?? print docker processes, and show these ports'                  ✔  4s   gpt4-command-executor   system  
-Generated command: docker ps -a -q --no-trunc | xargs docker port
-Do you want to execute this command? (y/n): y
-```
-
-```
-    ~/gpt4-command-executor    main *2    ./copilot_cli '?? check my version of node.js'                                            INT ✘  gpt4-command-executor   system  
-Generated command: node -v
-Do you want to execute this command? (y/n): y
-v19.8.1
+    ~  q '?? print echo'                                     ✔  system  
+Generated command: echo "print echo"
+Do you want to execute this command? (y/n): n
+Sorry, I couldn't generate a command for that request.
 ```
 
 ## Contributing
