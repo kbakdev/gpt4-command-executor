@@ -55,6 +55,12 @@ Generated command: :() { :|: & }; :
 Do you want to execute this command? (y/n): 
 ```
 
+```
+    ~  q '?? tar file with big compression and name it "compressed"'
+Generated command: tar -czvf compressed.tar.gz *
+Do you want to execute this command? (y/n): 
+```
+
 
 ## Contributing
 Contributions are welcome! Please feel free to submit a Pull Request or create an Issue if you encounter any problems or have suggestions for improvements.
