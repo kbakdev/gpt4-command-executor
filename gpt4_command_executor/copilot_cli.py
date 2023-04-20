@@ -12,7 +12,7 @@ def copilot_cli(prompt):
 
 def main():
     if len(sys.argv) < 2:
-        print("Usage: copilot_cli 'command request'")
+        print("Usage: copilot_cli.py 'command request'")
         sys.exit(1)
 
     prompt = sys.argv[1]

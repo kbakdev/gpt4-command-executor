@@ -23,4 +23,4 @@ def get_terminal_command(prompt):
     elif prompt.startswith("gh?"):
         return get_gh_command(prompt[3:].strip())
     else:
-        return gpt3.generate_terminal_command(prompt)
+        return None
