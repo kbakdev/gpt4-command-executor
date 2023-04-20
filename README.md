@@ -56,6 +56,13 @@ Generated command: docker ps -a -q --no-trunc | xargs docker port
 Do you want to execute this command? (y/n): y
 ```
 
+```
+    ~/gpt4-command-executor    main *2    ./copilot_cli '?? check my version of node.js'                                            INT ✘  gpt4-command-executor   system  
+Generated command: node -v
+Do you want to execute this command? (y/n): y
+v19.8.1
+```
+
 ## Contributing
 Contributions are welcome! Please feel free to submit a Pull Request or create an Issue if you encounter any problems or have suggestions for improvements.
 
