@@ -18,12 +18,10 @@ def main():
 
     query = sys.argv[1]
     command = generate_command(query)
-    explanation = generate_explanation(command)
     print(f"Generated command: {command}")
-    print(f"Explanation: {explanation}")
 
     while True:
-        user_input = input("Do you want to execute this command? (y/n/r) for revision: ")
+        user_input = input("Do you want to execute this command? (y/n/r/e) for revision or explanation: ")
 
         if user_input.lower() == 'y':
             subprocess.run(command, shell=True)
@@ -32,11 +30,12 @@ def main():
             break
         elif user_input.lower() == 'r':
             command = revise_command(command)
-            explanation = generate_explanation(command)
             print(f"Revised command: {command}")
+        elif user_input.lower() == 'e':
+            explanation = generate_explanation(command)
             print(f"Explanation: {explanation}")
         else:
-            print("Invalid input, please enter 'y', 'n', or 'r'.")
+            print("Invalid input, please enter 'y', 'n', 'r', or 'e'.")
 
 
 if __name__ == "__main__":
