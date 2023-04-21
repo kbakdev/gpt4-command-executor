@@ -116,6 +116,13 @@ Generated command: curl -X GET
 Do you want to execute this command? (y/n): y
 ```
 
+## Cost per Usage
+Keep in mind that this tool utilizes OpenAI's GPT, which has a cost associated with it.
+The average cost per script execution (2 queries with 25 tokens each) is approximately $0.00005,
+while the extreme case (2 queries with 50 tokens each) is around $0.00010.
+Please be aware of this cost when using the tool frequently.
+Note that OpenAI charges are based on the number of tokens used, and billing is done at the end of the month.
+
 ## Contributing
 Contributions are welcome! Please feel free to submit a Pull Request or create an Issue if you encounter any problems or have suggestions for improvements.
 
