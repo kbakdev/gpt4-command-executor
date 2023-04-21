@@ -51,3 +51,17 @@ def revise_command(command):
 
     revised_command = response.choices[0].text.strip()
     return revised_command
+
+
+def generate_explanation(command):
+    response = openai.Completion.create(
+        engine="text-davinci-002",
+        prompt=f"Explain the following shell command in simple terms: {command}",
+        max_tokens=100,
+        n=1,
+        stop=None,
+        temperature=0.5,
+    )
+
+    explanation = response.choices[0].text.strip()
+    return explanation
