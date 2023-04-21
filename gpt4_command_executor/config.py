@@ -7,12 +7,12 @@ def get_general_command(prompt):
 
 def get_git_command(prompt):
     git_prompt = f"git {prompt}"
-    return gpt3.generate_terminal_command(git_prompt)
+    return gpt3.generate_command(git_prompt)
 
 
 def get_gh_command(prompt):
     gh_prompt = f"github {prompt}"
-    return gpt3.generate_terminal_command(gh_prompt)
+    return gpt3.generate_command(gh_prompt)
 
 
 def get_terminal_command(prompt):
