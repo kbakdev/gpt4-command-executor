@@ -2,7 +2,7 @@ from gpt4_command_executor import gpt3
 
 
 def get_general_command(prompt):
-    return gpt3.generate_terminal_command(prompt)
+    return gpt3.generate_command(prompt)
 
 
 def get_git_command(prompt):
