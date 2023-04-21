@@ -6,3 +6,4 @@ command_executor.log
 build
 copilot_cli.egg-info
 dist
+command_history.json

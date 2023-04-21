@@ -39,6 +39,12 @@ Please ensure you understand and accept all potential risks associated with exec
 Here's an example of the script in action:
 
 ```
+q --query "print working directory"
+q --query "print working directory" --explain
+q --history
+```
+
+```
     ~  q '?? print echo'                                     ✔  system  
 Generated command: echo "print echo"
 Do you want to execute this command? (y/n): n

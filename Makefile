@@ -13,3 +13,6 @@ clean:
 	find . -name "*.pyc" -exec rm {} +
 	find . -name "*.pyo" -exec rm {} +
 	find . -name "*~" -exec rm {} +
+
+setup_alias_q:
+	@alias q='python3 gpt4_command_executor/copilot_cli.py'
