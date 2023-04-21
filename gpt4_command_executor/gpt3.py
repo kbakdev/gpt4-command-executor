@@ -3,7 +3,6 @@ import os
 import openai
 from dotenv import load_dotenv
 
-
 load_dotenv()
 
 OPENAI_API_KEY = os.environ["OPENAI_API_KEY"]
@@ -24,3 +23,31 @@ def generate_terminal_command(prompt):
 
     command = response.choices[0].text.strip()
     return command
+
+
+def generate_command(query):
+    response = openai.Completion.create(
+        engine="text-davinci-003",
+        prompt=f"Translate the following command request into a shell command: {query}",
+        max_tokens=50,
+        n=1,
+        stop=None,
+        temperature=0.5,
+    )
+
+    command = response.choices[0].text.strip()
+    return command
+
+
+def revise_command(command):
+    response = openai.Completion.create(
+        engine="text-davinci-002",
+        prompt=f"Please revise the following shell command to improve its accuracy: {command}",
+        max_tokens=50,
+        n=1,
+        stop=None,
+        temperature=0.5,
+    )
+
+    revised_command = response.choices[0].text.strip()
+    return revised_command
