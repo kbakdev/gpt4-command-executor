@@ -1,7 +1,10 @@
 .PHONY: install test clean
 
 install:
+	rm -rf $HOME/.local/bin
 	pip install -r requirements.txt
+	pip install --user .
+
 
 test:
 	pytest
