@@ -18,7 +18,7 @@ def main():
 
     query = sys.argv[1]
     command = generate_command(query)
-    explanation = generate_explanation(query)
+    explanation = generate_explanation(command)
     print(f"Generated command: {command}")
     print(f"Explanation: {explanation}")
 
